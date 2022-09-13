@@ -1,0 +1,4 @@
+# My custom i3 config
+## application launcher (default: dmenu)
+dmenu-extended
+https://github.com/MarkHedleyJones/dmenu-extended
