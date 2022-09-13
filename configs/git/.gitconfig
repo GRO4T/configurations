@@ -1,0 +1,8 @@
+[user]
+	email = damian.kolaska99@gmail.com
+	name = Damian Kolaska
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
