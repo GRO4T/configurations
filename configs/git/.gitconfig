@@ -6,3 +6,9 @@
 	br = branch
 	ci = commit
 	st = status
+[pull]
+	rebase = true
+[diff]
+	colorMoved = zebra
+[core]
+	editor = vim
