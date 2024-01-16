@@ -1,0 +1,12 @@
+live_config_reload = true
+
+[env]
+TERM = "alacritty"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Regular"
+
+[window.dimensions]
+columns = 160
+lines = 40
