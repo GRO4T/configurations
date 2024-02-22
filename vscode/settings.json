@@ -1,0 +1,9 @@
+{
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "Atom One Dark",
+    "terminal.integrated.defaultProfile.linux": "tmux"
+}
