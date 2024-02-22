@@ -1,0 +1,8 @@
+# prompt
+PS1='\[\e[38;5;208m\]($(git branch 2>/dev/null | grep '"'"'*'"'"' | colrm 1 2)) \[\e[38;5;132m\]\u@\h\[\e[0m\]:\[\e[38;5;69m\]\w\n\[\e[0m\]\\$ '
+
+# execute tmux on startup
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
+
