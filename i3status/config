@@ -1,0 +1,58 @@
+### General Settings 
+general {
+        colors = false
+        interval = 2
+        color_good = "#919753"
+        color_degraded = "#EBCB8B"
+        color_bad = "#A35151"
+        markup = pango
+}
+
+### Widget List 
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "volume master"
+order += "cpu_usage"
+order += "memory"
+order += "disk /"
+order += "tztime local"
+
+### Widget Settings
+
+wireless _first_ {
+        format_up = "<span foreground='#458588'></span><span foreground='#000000' background='#458588'> W: (%quality at %essid) %ip </span><span foreground='#282828' background='#458588'></span>"
+        format_down = "<span foreground='#eb3440'></span><span foreground='#000000' background='#eb3440'> W: down </span><span foreground='#282828' background='#eb3440'></span>"
+}
+
+ethernet _first_ {
+        format_up = "<span foreground='#458588'></span><span foreground='#000000' background='#458588'> E: %ip (%speed) </span><span foreground='#282828' background='#458588'></span>"
+        format_down = "<span foreground='#eb3440'></span><span foreground='#000000' background='#eb3440'> E: down </span><span foreground='#282828' background='#eb3440'></span>"
+}
+
+volume master {
+        format = "<span foreground='#98971a'></span><span background='#98971a'>♪: %volume </span><span foreground='#282828' background='#98971a'></span>"
+        format_muted = "<span foreground='#98971a'></span><span background='#98971a'>♪: muted (%volume) </span><span foreground='#282828' background='#98971a'></span>"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+cpu_usage {
+  format = "<span foreground='#b16286'></span><span background='#b16286'> CPU   %usage </span><span foreground='#282828' background='#b16286'></span>"
+}
+
+memory {
+        format = "<span foreground='#d3869b'></span><span background='#d3869b'> MEMORY 󰍛 %used/%total </span><span foreground='#282828' background='#d3869b'></span>"
+        threshold_degraded = "1G"
+        format_degraded = "<span foreground='#eb3440'></span><span background='#eb3440'> MEMORY 󰍛 < %available </span><span foreground='#282828' background='#eb3440'></span>"
+}
+
+disk "/" {
+        format = "<span foreground='#83a598'></span><span background='#83a598'> %avail </span><span foreground='#282828' background='#83a598'></span>"
+}
+
+tztime local {
+        format = "<span foreground='#8ec87c'></span><span foreground='#000000' background='#8ec87c'> %time</span><span foreground='#282828' background='#8ec87c'></span>"
+		format_time = "%Y-%m-%d %H:%M:%S"
+		timezone = "Europe/Warsaw"
+}
